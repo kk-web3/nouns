@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nouns RC Tribute</title>
+    <!-- Add your CSS file here -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Nouns RC Tribute</h1>
+        <p>Drop your noun running club memory here! Everybody can see how long you have run.</p>
+    </header>
+    <nav>
+        <!-- Add your navigation links here -->
+    </nav>
+    <main>
+        <section id="about">
+            <!-- Noun running club tribute>
+        </section>
+        <section id="assets">
+            <!-- Place an image container where we will put the fetched image -->
+            <div id="noun-image"></div>
+        </section>
+        <section id="code">
+            <!-- If you want to share code snippets -->
+            <!-- <pre><code>Your code here</code></pre> -->
+        </section>
+    </main>
+    <footer>
+        <!-- Add your footer links and information here -->
+    </footer>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            // Choose an ID for the Noun you want to display
+            const nounId = 0;
+
+            // Create a new image element
+            const img = new Image();
+
+            // Set the source of the image to the Noun Pics API
+            img.src = `https://noun.pics/${nounId}`;
+
+            // When the image has loaded, add it to the page
+            img.onload = function() {
+                document.getElementById('noun-image').appendChild(img);
+            };
+        });
+    </script>
+</body>
+</html>
